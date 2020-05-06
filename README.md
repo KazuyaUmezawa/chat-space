@@ -25,7 +25,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, uniqur: true|
+|name|string|null: false, uniqur: true|
 
 ### Association
 has_many :groups_users

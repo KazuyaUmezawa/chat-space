@@ -1,0 +1,27 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      %p.side-bar__user-name__top-items__name ねこ
+      %ul.side-bar__user-name__top-items__icons
+        %li.side-bar__user-name__top-items__icons__edit-name
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.side-bar__user-name__top-items__icons__setting
+          = link_to "#" do
+            = icon('fas', 'cog')
+  .group-list 
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        test
+      %p.group__latest-message
+        まだメッセージがありません
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        test2
+      %p.group__latest-message
+        まだメッセージがありません
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        test3
+      %p.group__latest-message
+        これはテストです。

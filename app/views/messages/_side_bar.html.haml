@@ -5,24 +5,15 @@
         = current_user.name
       %ul.side-bar__user-name__top-items__icons
         %li.side-bar__user-name__top-items__icons__edit-name
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.side-bar__user-name__top-items__icons__setting
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .group-list 
-    = link_to "#", class:"group" do
-      %p.group__group-name
-        test
-      %p.group__latest-message
-        まだメッセージがありません
-    = link_to "#", class:"group" do
-      %p.group__group-name
-        test2
-      %p.group__latest-message
-        まだメッセージがありません
-    = link_to "#", class:"group" do
-      %p.group__group-name
-        test3
-      %p.group__latest-message
-        これはテストです。
+    - current_user.groups.each do |group|
+      = link_to "#", class:"group" do
+        .group__group-name
+          = group.name
+        .group__latest-message
+          まだメッセージがありません

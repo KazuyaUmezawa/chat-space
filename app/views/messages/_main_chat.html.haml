@@ -11,14 +11,7 @@
         %p Edit
   .chat-main__message-list
     = render @messages
-  -#   .group-block
-  -#     .group-detail
-  -#       .group-detail__member
-  -#         masa
-  -#       .group-detail__timestamp
-  -#         2019/11/20(Wed) 17:43:01
-  -#     .group-message
-  -#       おはよう！
+
   .chat-main__message-form
     .message-box 
       = form_for [@group, @message] do |f|

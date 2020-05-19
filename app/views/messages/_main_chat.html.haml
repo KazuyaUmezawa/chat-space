@@ -4,6 +4,7 @@
       .group__group-name
         = @group.name
       .group__group-member
+        Member :
         - @group.users.each do |user|
           = user.name
     .edit
@@ -13,10 +14,10 @@
     = render @messages
 
   .chat-main__message-form
-    .message-box 
-      = form_for [@group, @message] do |f|
+    = form_for [@group, @message] do |f|
+      .message-box
         = f.text_field :content, class: 'message-box__text', placeholder: 'type a message'
         = f.label :image, class: 'message-box__image' do
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'message-box__image__file'
-        = f.submit 'Send', class: 'submit-btn'
+      = f.submit 'Send', class: 'submit-btn'

@@ -37,14 +37,17 @@
       margin: 28px 0;
       padding: 0 20px;
     }
-    .btn-flat-dashed-border {
-      display: inline-block;
-      padding: 0.5em 1em;
+    .edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      top: 0px;
       text-decoration: none;
-      color: #67c5ff;
-      border: dashed 1px #67c5ff;
-      border-radius: 3px;
-      transition: .4s;
+      color: #38aef0;
     }
   }
 
